@@ -1,0 +1,6 @@
+.idea/
+
+.DS_Store
+
+ibgateway-standalone-linux-*-x64.sh
+docker-compose.yml

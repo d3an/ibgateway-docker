@@ -26,7 +26,7 @@ RUN apt-get -qq update -y && apt-get -qq install -y unzip xvfb libxtst6 libxrend
 # Setup IB TWS
 RUN mkdir -p /opt/TWS
 WORKDIR /opt/TWS
-RUN wget ${GITHUB_REPO}/releases/download/${TWS_MAJOR_VRSN}.${TWS_MINOR_VRSN}/ibgateway-standalone-linux-${TWS_MAJOR_VRSN}-${TWS_MINOR_VRSN}-x64.sh
+RUN curl -O ${GITHUB_REPO}/releases/download/${TWS_MAJOR_VRSN}.${TWS_MINOR_VRSN}/ibgateway-standalone-linux-${TWS_MAJOR_VRSN}-${TWS_MINOR_VRSN}-x64.sh
 COPY ./ibgateway-standalone-linux-${TWS_MAJOR_VRSN}-${TWS_MINOR_VRSN}-x64.sh /opt/TWS/ibgateway-standalone-linux-x64.sh
 RUN chmod a+x /opt/TWS/ibgateway-standalone-linux-x64.sh
 
